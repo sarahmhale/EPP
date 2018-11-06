@@ -1,9 +1,11 @@
 import { ImagePickerIOS } from 'react-native'
-
+import { accessKeyId, secretAccessKey, region } from '../config/secrets'
 var AWS = require('aws-sdk');
 
 var s3 = new AWS.S3({
-	region: "us-east-1"
+	accessKeyId,
+	secretAccessKey,
+	region
   });
 
 
@@ -11,6 +13,7 @@ var s3 = new AWS.S3({
 
 export const uploadImage = (callback, name) => {
     ImagePickerIOS.openSelectDialog({}, imageUri => {
+		callback(imageUri)
       //get signed url
 	  let presignedUrl;
 	  let Key = name + 'jpg'
