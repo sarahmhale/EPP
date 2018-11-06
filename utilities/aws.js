@@ -3,8 +3,6 @@ import { ImagePickerIOS } from 'react-native'
 var AWS = require('aws-sdk');
 
 var s3 = new AWS.S3({
-	accessKeyId: "AKIAJC5BHGOLZMPZAUBQ", 
-	secretAccessKey: "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", 
 	region: "us-east-1"
   });
 
