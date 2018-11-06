@@ -15,7 +15,7 @@ export default class SettingsScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-      <Image style={styles.image} source={{uri: 'https://i.pinimg.com/originals/f8/12/8c/f8128c045ac5bda679971ab7bacace1e.jpg'}}/>
+      <Image style={styles.image} source={{uri: 'https://s3.amazonaws.com/eppimageslol/llama.jpg'}}/>
         <Text>Namn Namnsson</Text>
         <Text>Prestationer</Text> 
       </View>);
